@@ -1,41 +1,49 @@
-# 👕 Proyek Toko Baju (Laravel 12 CRUD)
+# 👕 Toko Baju Management System (Laravel 12)
 
-Aplikasi manajemen stok produk toko baju sederhana yang dibangun menggunakan **Laravel 12** dan **PHP 8.2**. Sistem ini memungkinkan pengguna untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada data produk baju.
+[![Laravel Version](https://img.shields.io/badge/Laravel-12.x-red.svg)](https://laravel.com)
+[![PHP Version](https://img.shields.io/badge/PHP-8.2-blue.svg)](https://php.net)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
----
-
-## 🚀 Spesifikasi Teknis
-* **Bahasa Pemrograman**: PHP 8.2
-* **Framework**: Laravel 12
-* **Database**: MySQL (MariaDB)
-* **Version Control**: Git (Identitas: `salsaratu123`)
+Aplikasi **Toko Baju** adalah sistem manajemen inventaris modern yang dirancang untuk memudahkan pengelolaan stok barang secara digital. Dibangun dengan fokus pada kecepatan dan kemudahan penggunaan.
 
 ---
 
-## 🛠️ Fitur Utama
-1. **Daftar Produk**: Menampilkan tabel produk dengan kolom Nama, Kategori, Stok, dan Harga.
-2. **Tambah Produk**: Formulir input untuk menambah koleksi baju baru.
-3. **Update Produk**: Fitur untuk mengubah detail informasi baju yang sudah ada.
-4. **Hapus Produk**: Fitur menghapus data produk dengan konfirmasi keamanan.
+## 💻 Stack Teknologi
+* **Backend**: Laravel 12 (Framework PHP terbaru)
+* **Language**: PHP 8.2
+* **Database**: MySQL / MariaDB
+* **Version Control**: Git
 
 ---
 
-## 📦 Cara Instalasi & Menjalankan Proyek
+## ✨ Fitur Unggulan
+* 📦 **Manajemen Stok**: Pantau jumlah stok baju secara akurat.
+* 🏷️ **Kategorisasi**: Pengelompokan baju berdasarkan jenis (Kaos, Kemeja, Jaket, dll).
+* 💰 **Pricing System**: Pengaturan harga satuan produk yang dinamis.
+* 🛠️ **Full CRUD**: Tambah, Lihat, Edit, dan Hapus data dalam satu antarmuka.
 
-Ikuti langkah-langkah berikut untuk menjalankan proyek di komputer lokal:
+---
 
-### 1. Masuk ke Folder Proyek
-Buka terminal atau PowerShell, lalu arahkan ke folder tempat kamu menyimpan proyek ini:
+## 🛠️ Panduan Instalasi Cepat
+
+Ikuti langkah-langkah di bawah ini untuk menjalankan proyek di perangkat lokal Anda:
+
+### 1. Persiapan Folder
+Buka terminal (PowerShell/Command Prompt) dan masuk ke direktori proyek:
 ```bash
 cd C:\xampp\htdocs\toko_baju
-2. Instalasi Package (Composer)
-Pastikan PHP 8.2 sudah terinstal, lalu jalankan:
 
-composer install
-
-### Tips Tambahan:
-1.  **Membuat File**: Di VS Code, klik kanan di area folder utama (bukan di dalam folder `app` atau `resources`), pilih **New File**, beri nama `README.md`.
-2.  **Paste**: Tempelkan semua kode di atas ke dalam file tersebut.
-3.  **Simpan**: Tekan `Ctrl + S`.
-
-Sekarang dokumentasi proyek kamu sudah sangat lengkap dan profesional sesuai dengan Laravel 12! Apakah ada fitur lain yang ingin kamu tambahkan?
+2. Instalasi LibraryGunakan Composer untuk menginstal semua dependensi Laravel:Bashcomposer install
+3. Konfigurasi DatabaseSesuaikan file .env Anda agar terhubung dengan database MySQL:Cuplikan kodeDB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=toko_baju
+DB_USERNAME=root
+DB_PASSWORD=
+4. Migrasi Tabel (Crucial)Jalankan perintah ini untuk membangun tabel produks dengan kolom nama, kategori, stok, dan harga:Bashphp artisan migrate:fresh
+5. Jalankan AplikasiNyalakan server lokal:Bashphp artisan serve
+Buka browser dan akses: http://127.0.0.1:8000/produk📂 Struktur Data (Database Schema)Nama KolomTipe DataDeskripsiidBigIntID Unik ProduknamaStringNama/Model BajukategoriStringJenis Kategori BajustokIntegerJumlah Stok TersediahargaIntegerHarga per Satuan📜 Riwayat Pengembangan (Git)Proyek ini dikelola menggunakan Git dengan identitas pengembang sebagai berikut:Username: salsaratu123Email: salsaratusantika@example.comCommit Terakhir: first commit (Status: Working Tree Clean)📄 LisensiDistributed under the MIT License. See LICENSE for more information.Dibuat dengan ❤️ oleh salsaratu123
+### Tips Penggunaan:
+1.  **Visual**: README ini sudah menggunakan "Badge" (ikon Laravel & PHP) di bagian atas agar terlihat seperti proyek profesional di GitHub.
+2.  **Skema**: Saya menyertakan tabel database agar kamu tidak lupa kolom apa saja yang sudah kamu buat (nama, kategori, stok, harga).
+3.  **Path**: Instruksi `cd C:\xampp\htdocs\toko_baju` sangat penting agar kamu tidak 
